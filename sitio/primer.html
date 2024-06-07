@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMER LINK</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <header class="borde header">
+        <ul>
+            <li><a href="primer.html">PRIMER LINK</a></li>
+            <li><a href="index.html">SEGUNDO LINK</a></li>
+            <li><a href="personajes.html">TERCER LINK</a></li>
+            <li><a href="nosotros.html">CUARTO LINK</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 class="titulo">contacto</h2>
+        <form action="" method="post" class="formulario">
+            <fieldset class="fieldset">
+                <legend class="legend">Informacion del contacto</legend>
+
+                <div class="form_group">
+                    <label for="nombre" class="label">NAME</label>
+                    <input class="input" type="text" name="nombre" id="nombre" required>
+                </div>
+
+
+                <div class="form_group">
+                    <label for="apellido" class="label">SURNAME</label>
+                    <input class="input" type="text" name="apellido" id="apellido">
+                </div>
+
+
+                <div class="form_group">
+                    <label for="clave" class="label">CONTRASEÑA</label>
+                    <input class="input" type="password" name="clave" id="clave">
+                </div>
+
+
+                <div class="form_group">
+                    <label for="edad" class="label">Edad</label>
+                    <input class="input" type="number" name="edad" id="edad" min="18" max="100">
+                </div>
+
+
+                <div class="form_group">
+                    <label for="mensaje" class="label">mensaje</label>
+                    <textarea name="mensaje" id="mensaje" rows="10" maxlength="100"></textarea>
+                </div>
+
+
+                <div class="form_group">
+                    <label for="url" class="label">URL</label>
+                    <input class="input" type="url" name="sitioweb" pattern="https?://.+" title="porfavor ingrese una url valida">
+                </div>
+
+                <div class="form_group">
+                    <label for="pais" class="label">Pais de procedencia</label>
+                    <select name="pais" id="">
+                        <option value="A">argentina</option>
+                        <option value="B">bolivia</option>
+                        <option value="C">chile</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <p for="color"> Selecciona tu color </p>
+                    <label for="rojo" class="label">Rojo</label>
+                    <input class="input" type="radio" name="color" value="rojo">
+                    <label for="azul" class="label">Azul</label>
+                    <input class="input" type="radio" name="color" value="azul">
+                    <label for="amarillo" class="label">Amarillo</label>
+                    <input class="input" type="radio" name="color" value="amarillo">
+                </div>
+
+                <div class="form_group">
+                    <p for="condimento">Selecciona tu condimento</p>
+                    <label for="mostaza" class="label"> Mostaza</label>
+                    <input class="input" type="checkbox" name="condimento">
+                    <label for="ketchup" class="label">Ketchup</label>
+                    <input class="input" type="checkbox" name="condimento">
+                    <label for="mayonesa" class="label">Mayonesa</label>
+                    <input class="input" type="checkbox" name="condimento">
+                </div>
+
+            </fieldset>
+            <input class="submit" type="submit" value="Enviar formulario">
+
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "logo header header header"
+        "nav nav productos publicidad"
+        "nav nav servicios publicidad"
+        "nav nav footer footer";
+    grid-template-rows: 100px 1fr 1fr 75px;
+    grid-template-columns: 10% 5% 75% auto;
+    row-gap: 5px;
+    column-gap: 5px;
+    height: 100vh;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header {
+    background-color: aquamarine;
+    grid-area: header;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header li {
+    list-style: none;
+    padding: 1rem;
+    font-weight: bolder;
+    display: inline;
+}
+
+.header li:active {
+    background-color: chartreuse;
+    height: auto;
+    width: auto;
+}
+
+.nav {
+    background-color: darkslategray;
+    grid-area: nav;
+    border-radius: 15px;
+}
+
+#productos {
+    background-color: darkolivegreen;
+    grid-area: productos;
+    border-radius: 15px;
+}
+
+#servicios {
+    background-color: lightsalmon;
+    grid-area: servicios;
+    border-radius: 15px;
+}
+
+.publicidad {
+    background-color: rgb(32, 178, 170);
+    grid-area: publicidad;
+    border-radius: 15px;
+}
+
+.publicidad img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+
+.footer {
+    background-color: rgb(233, 233, 104);
+    grid-area: footer;
+    border-radius: 15px;
+}
+
+.fondo {
+    background-color: burlywood;
+}
+
+.borde {
+    border: 3px dotted black;
+}
+
+.logo {
+    background-color: indianred;
+    grid-area: logo;
+    border-radius: 15px;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* formularios_______________________________________________________________________________________________*/
+.formulario {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fieldset {
+    border: 3px solid black;
+    padding: 1rem;
+
+}
+
+.label {
+    color: rgba(0, 0, 0, 0.719);
+    display: block;
+}
+
+.form_group {
+    background-color: darksalmon;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.input,
+textarea,
+select {
+    width: 100%;
+
+}
+
+.input:focus {
+    background-color: bisque;
+}
+
+.submit {
+    padding: 1rem;
+    background-color: aquamarine;
+    border: 2px solid black;
+    cursor: pointer;
+    border-top: none;
+}
+
+.submit:hover {
+    border: 2px dotted black;
+    border-radius: 1rem;
+    background-color: red;
+    color: white;
+}
+
+.submit:focus {
+    background-color: rgb(160, 0, 0)
+}
+
+/* css mas complejo */
+
+a:hover {
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+    color: red;
+}
+
+a:visited {
+    color: #999999;
+}
+
+a:active {
+    background-color: yellow;
+    color: black;
+}
+
+div:not(.padre) {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.padre div:nth-child(2) {
+    background-color: blueviolet;
+}
+
+/* ANIMACIONES _____________________________________________________________________________________________ */
+
+.gradiente{
+    height: 20vh;
+    background-color: blueviolet;
+    background: rgb(238,174,202); background: radial-gradient(circle, rgba(238,174,202,1) 4%, rgba(255,57,191,1) 53%, rgba(145,160,255,1) 100%);
+}
+.box_ejemplo{
+    height: 150px;
+    width: 150px;
+    transform: skewy(25deg);
+}
+
+.rojo{
+    background-color: crimson;
+}
+.verde{
+    background-color: green;
+}
+
+.box_padre div{
+    width: 100px;
+    height: 100px;
+    transition: all 500ms;
+}
+.box_padre div:hover{
+    height: 200px;
+    width: 200px;
+    padding: 2rem;
+    background-color: cyan;
+}
+
+.box_ejemplo_3{
+    padding-top: 2rem;
+}
+.input_transicion{
+    width: 100px;
+    height: 100px;
+    transition: 500ms;
+}
+.input_transicion:focus{
+    width: 200px;
+    font-size: 24px;
+    background-color: #e6d15e;
+}
+.box_ejemplo_4{
+    background-color: cadetblue;
+    height: 100px;
+    width: 100px;
+    animation-name: animacion;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+@keyframes animacion {
+    0%{width: 100px; background-color: #e6d15e;}
+    25%{width: 300px; background-color: coral;}
+    50%{width: 200px; background-color: chocolate;}
+    75%{ width: 700px; background-color: darkorange;}
+    100%{width: 100px;}
+}
